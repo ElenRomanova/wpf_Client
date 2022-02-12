@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1F463B2-3412-4FD2-BB86-972988352FC3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPF_Task1</RootNamespace>
+    <AssemblyName>WPF_Task1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddUpdate.xaml.cs">
+      <DependentUpon>AddUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AvtoService.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoService.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AvtoService.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AvtoService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvtoService.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.xaml.cs">
+      <DependentUpon>Clients.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientService.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentByService.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gender.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPhoto.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSale.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServicePhoto.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs">
+      <DependentUpon>AvtoService.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visits.xaml.cs">
+      <DependentUpon>Visits.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Clients.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Visits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="AvtoService.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AvtoService.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AvtoService.edmx.diagram">
+      <DependentUpon>AvtoService.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AvtoService.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AvtoService.edmx</DependentUpon>
+      <LastGenOutput>AvtoService.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AvtoService.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AvtoService.edmx</DependentUpon>
+      <LastGenOutput>AvtoService.cs</LastGenOutput>
+    </Content>
+    <Resource Include="images\right-arrow.png" />
+    <Resource Include="images\agent_100.png" />
+    <Resource Include="images\agent_101.png" />
+    <Resource Include="images\agent_102.png" />
+    <Resource Include="images\agent_103.png" />
+    <Resource Include="images\agent_105.png" />
+    <Resource Include="images\agent_106.png" />
+    <Resource Include="images\agent_107.png" />
+    <Resource Include="images\agent_108.png" />
+    <Resource Include="images\agent_109.png" />
+    <Resource Include="images\agent_110.png" />
+    <Resource Include="images\agent_111.png" />
+    <Resource Include="images\agent_112.png" />
+    <Resource Include="images\agent_113.png" />
+    <Resource Include="images\agent_114.png" />
+    <Resource Include="images\agent_115.png" />
+    <Resource Include="images\agent_116.png" />
+    <Resource Include="images\agent_117.png" />
+    <Resource Include="images\agent_118.png" />
+    <Resource Include="images\agent_119.png" />
+    <Resource Include="images\agent_120.png" />
+    <Resource Include="images\agent_121.png" />
+    <Resource Include="images\agent_122.png" />
+    <Resource Include="images\agent_123.png" />
+    <Resource Include="images\agent_124.png" />
+    <Resource Include="images\agent_125.png" />
+    <Resource Include="images\agent_126.png" />
+    <Resource Include="images\agent_127.png" />
+    <Resource Include="images\agent_128.png" />
+    <Resource Include="images\agent_129.png" />
+    <Resource Include="images\agent_130.png" />
+    <Resource Include="images\agent_31.png" />
+    <Resource Include="images\agent_33.png" />
+    <Resource Include="images\agent_34.png" />
+    <Resource Include="images\agent_36.png" />
+    <Resource Include="images\agent_37.png" />
+    <Resource Include="images\agent_38.png" />
+    <Resource Include="images\agent_39.png" />
+    <Resource Include="images\agent_40.png" />
+    <Resource Include="images\agent_43.png" />
+    <Resource Include="images\agent_44.png" />
+    <Resource Include="images\agent_45.png" />
+    <Resource Include="images\agent_46.png" />
+    <Resource Include="images\agent_47.png" />
+    <Resource Include="images\agent_48.png" />
+    <Resource Include="images\agent_49.png" />
+    <Resource Include="images\agent_50.png" />
+    <Resource Include="images\agent_52.png" />
+    <Resource Include="images\agent_53.png" />
+    <Resource Include="images\agent_54.png" />
+    <Resource Include="images\agent_55.png" />
+    <Resource Include="images\agent_56.png" />
+    <Resource Include="images\agent_57.png" />
+    <Resource Include="images\agent_58.png" />
+    <Resource Include="images\agent_59.png" />
+    <Resource Include="images\agent_60.png" />
+    <Resource Include="images\agent_61.png" />
+    <Resource Include="images\agent_62.png" />
+    <Resource Include="images\agent_63.png" />
+    <Resource Include="images\agent_64.png" />
+    <Resource Include="images\agent_65.png" />
+    <Resource Include="images\agent_66.png" />
+    <Resource Include="images\agent_67.png" />
+    <Resource Include="images\agent_68.png" />
+    <Resource Include="images\agent_69.png" />
+    <Resource Include="images\agent_71.png" />
+    <Resource Include="images\agent_74.png" />
+    <Resource Include="images\agent_75.png" />
+    <Resource Include="images\agent_76.png" />
+    <Resource Include="images\agent_77.png" />
+    <Resource Include="images\agent_78.png" />
+    <Resource Include="images\agent_79.png" />
+    <Resource Include="images\agent_80.png" />
+    <Resource Include="images\agent_81.png" />
+    <Resource Include="images\agent_82.png" />
+    <Resource Include="images\agent_83.png" />
+    <Resource Include="images\agent_85.png" />
+    <Resource Include="images\agent_86.png" />
+    <Resource Include="images\agent_87.png" />
+    <Resource Include="images\agent_88.png" />
+    <Resource Include="images\agent_90.png" />
+    <Resource Include="images\agent_91.png" />
+    <Resource Include="images\agent_92.png" />
+    <Resource Include="images\agent_93.png" />
+    <Resource Include="images\agent_94.png" />
+    <Resource Include="images\agent_95.png" />
+    <Resource Include="images\agent_96.png" />
+    <Resource Include="images\agent_97.png" />
+    <Resource Include="images\agent_98.png" />
+    <Resource Include="images\agent_99.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
